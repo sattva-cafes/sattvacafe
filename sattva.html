@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sattva Cafe | Artisan Coffee & Global Flavors</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#4a2c2a', // Deep Coffee Brown
+                        'secondary': '#a0522d', // Sienna/Terracotta
+                        'accent': '#f5deb3', // Wheat/Cream
+                        'background': '#fdfaf5', // Off-White/Paper
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: 0, transform: 'translateY(10px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for professional feel */
+        .hero-bg {
+            /* Cozy Interior Shot: Warm lighting and wood textures */
+            background-image: url('Gemini_Generated_Image_b1xij1b1xij1b1xi.png');
+            background-size: cover;
+            background-position: top;
+        }
+        .text-shadow-custom {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .section-separator {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #a0522d;
+            margin: 0 auto 3rem;
+            border-radius: 9999px;
+        }
+        /* Style for smooth scrolling */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-background text-primary font-sans">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-background/95 shadow-lg backdrop-blur-sm">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+            <a href="#home" class="text-3xl font-serif font-bold text-primary tracking-wider">Sattva.</a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8 text-lg font-medium">
+                <a href="#menu" class="text-primary hover:text-secondary transition duration-300">Menu</a>
+                <a href="#story" class="text-primary hover:text-secondary transition duration-300">Our Story</a>
+                <a href="#specials" class="text-primary hover:text-secondary transition duration-300">Specials</a>
+                <a href="#contact" class="text-primary hover:text-secondary transition duration-300">Visit</a>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="#" class="hidden md:block bg-secondary text-accent px-6 py-2 rounded-full font-semibold shadow-md hover:bg-primary transition duration-300 transform hover:scale-105">
+                Order Online
+            </a>
+            
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu (Hidden by Default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-background border-t border-accent">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#menu" class="block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-accent" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Menu</a>
+                <a href="#story" class="block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-accent" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Our Story</a>
+                <a href="#specials" class="block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-accent" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Specials</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-accent" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Visit</a>
+                <a href="#" class="block text-center bg-secondary text-accent px-3 py-2 mt-2 rounded-full font-semibold shadow-md hover:bg-primary transition duration-300">Order Online</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section id="home" class="hero-bg h-[100vh] flex items-center justify-center text-center p-4">
+        <div class="bg-primary/70 p-8 sm:p-12 rounded-xl max-w-4xl animate-[fade-in_1.5s_ease-out_forwards] shadow-2xl">
+            <h1 class="font-serif text-5xl sm:text-7xl font-extrabold text-accent leading-tight text-shadow-custom">
+                The Sattva Cafe
+            </h1>
+            <p class="mt-4 text-xl sm:text-2xl text-accent font-light italic tracking-wider">
+                Where Simplicity Meets Comfort in Every Sip.
+            </p>
+            <div class="mt-8 space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#menu" class="inline-block bg-accent text-primary px-8 py-3 rounded-full font-bold shadow-lg hover:bg-background transition duration-300 transform hover:scale-105">
+                    View Simple Menu
+                </a>
+                <a href="#contact" class="inline-block border-2 border-accent text-accent px-8 py-3 rounded-full font-bold shadow-lg hover:bg-accent hover:text-primary transition duration-300 transform hover:scale-105">
+                    Find Our Location
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Our Story/Philosophy Section -->
+    <section id="story" class="py-16 md:py-24 bg-background">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <h2 class="text-4xl font-serif font-bold text-center text-primary mb-2">Our Philosophy</h2>
+            <div class="section-separator"></div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1 space-y-6">
+                    <!-- Added a popular quote as requested -->
+                    <blockquote class="border-l-4 border-secondary pl-4 italic text-xl font-serif text-primary">
+                        "Where there is tea, there is hope."
+                        <footer class="text-sm font-sans text-primary/60 mt-2 block">&mdash; Arthur Wing Pinero</footer>
+                    </blockquote>
+                    <p class="text-xl text-primary/80">
+                        **Sattva** is more than a cafe; it's a feeling of purity, harmony, and balance. We meticulously prepare high-quality tea and pair it with the warmth of classic, comforting snacks, focusing on purity, harmony, and balance.
+                    </p>
+                    <p class="text-lg text-primary/70">
+                        Our goal is to create a peaceful, beautifully designed space for you to reset. From the creamy texture of our **Bun Maska** to the bold flavor of our **Traditional Chai**, every item is crafted with intention and care. We are committed to sustainability, local partnerships, and providing a retreat from the everyday hustle.
+                    </p>
+                    <a href="#contact" class="inline-block mt-4 text-secondary font-semibold hover:underline">
+                        Meet Our Baristas &rarr;
+                    </a>
+                </div>
+                <!-- Cozy Interior image link used here -->
+                <div class="order-1 md:order-2 rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-500">
+                    <img src="https://placehold.co/800x600/D2B48C/4A2C2A?text=Cozy+Seating+Area+with+Books" alt="Serene and quiet cafe seating area" class="w-full h-auto object-cover"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Simple Menu Highlights Section -->
+    <section id="menu" class="py-16 md:py-24 bg-accent/30">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <h2 class="text-4xl font-serif font-bold text-center text-primary mb-2">Our Simple & Comforting Menu</h2>
+            <p class="text-center text-xl mb-12 text-primary/70">Focusing on timeless classics: Tea, Bread, and Biscuits.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Tea (Chai) - Now uses the provided image focusing on the tea cup (left side) -->
+                <div class="bg-background rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300">
+                    <div class="h-48 bg-primary flex items-center justify-center" style="background-image: url('https://i.pinimg.com/474x/39/9e/08/399e08d850b98173f6a81b567b99e886.jpg'); background-size: cover; background-position: left center;">
+                        <h3 class="text-3xl font-serif font-bold text-accent text-shadow-custom group-hover:scale-105 transition duration-500">Authentic Indian Tea</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-lg font-semibold text-secondary">The Perfect Sip</p>
+                        <ul class="mt-2 space-y-2 text-primary/80">
+                            <li><span class="font-bold">Traditional Chai:</span> Robust, spiced, and milk-based.</li>
+                            <li><span class="font-bold">Black Tea:</span> Strong and comforting.</li>
+                            <li><span class="font-bold">Herbal Infusions:</span> Simple and refreshing.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2: Bread (Bun Maska) - Now uses the provided image focusing on the bread (center) -->
+                <div class="bg-background rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300">
+                    <div class="h-48 bg-secondary flex items-center justify-center" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI1L4mxuyAJ996b847yheb-rbEb9Srbjj5vQ&s'); background-size: cover; background-position: center center;">
+                        <h3 class="text-3xl font-serif font-bold text-accent text-shadow-custom group-hover:scale-105 transition duration-500">Freshly Baked Bread</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-lg font-semibold text-secondary">Simple & Delicious</p>
+                        <ul class="mt-2 space-y-2 text-primary/80">
+                            <li><span class="font-bold">Bun Maska:</span> Soft bread generously slathered with butter.</li>
+                            <li><span class="font-bold">Plain Toast:</span> A classic companion to tea.</li>
+                            <li><span class="font-bold">Pav Bhaji:</span> A savory, spiced vegetable mash with bread.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3: Biscuits - Now uses the provided image focusing on the biscuits (right side) -->
+                <div class="bg-background rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300">
+                    <div class="h-48 bg-accent/70 flex items-center justify-center" style="background-image: url('https://www.sugarfree-india.com/images/uploads/recipe-images/sugar-free-cream-biscuits-recipe.jpg'); background-size: cover; background-position: right center;">
+                        <h3 class="text-3xl font-serif font-bold text-primary text-shadow-custom group-hover:scale-105 transition duration-500">The Biscuit Selection</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-lg font-semibold text-secondary">The Perfect Dunker</p>
+                        <ul class="mt-2 space-y-2 text-primary/80">
+                            <li><span class="font-bold">Assorted Shortbreads:</span> Buttery and crumbly.</li>
+                            <li><span class="font-bold">Classic Glucose:</span> Sweet and energy-giving.</li>
+                            <li><span class="font-bold">Salted Crackers:</span> For a light, savory crunch.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-primary text-accent px-8 py-3 rounded-full font-bold shadow-lg hover:bg-secondary transition duration-300 transform hover:scale-105">
+                    See Full Digital Menu (PDF coming soon)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Specials/Events Section (Optional but engaging) -->
+    <section id="specials" class="py-16 md:py-24 bg-background">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <h2 class="text-4xl font-serif font-bold text-center text-primary mb-2">Weekly Spotlight</h2>
+            <div class="section-separator"></div>
+
+            <div class="flex flex-col md:flex-row bg-accent/50 p-6 rounded-xl shadow-xl">
+                <div class="md:w-1/3 flex items-center justify-center p-4">
+                    <!-- Snack Special image link used here -->
+                    <img src="https://placehold.co/300x300/4A2C2A/F5DEB3?text=Hot+Samosa+Special" alt="Seasonal Snack Special" class="w-48 h-48 rounded-full object-cover border-4 border-primary shadow-lg">
+                </div>
+                <div class="md:w-2/3 md:pl-8 mt-6 md:mt-0">
+                    <h3 class="text-3xl font-serif font-semibold text-primary">The Seasonal Hot Snack</h3>
+                    <p class="mt-2 text-xl text-secondary font-medium">Available for a limited time: Rainy Day Collection</p>
+                    <p class="mt-4 text-primary/80 leading-relaxed">
+                        Experience our seasonal special, a perfect pairing for your hot tea. Ask our staff about today's comforting, locally-sourced snack designed to bring warmth and joy to your day.
+                    </p>
+                    <div class="mt-6">
+                        <span class="inline-block bg-primary text-accent px-5 py-2 rounded-full text-sm font-semibold">
+                            Special Pricing Inquire Within
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Contact & Location Section - UPDATED WITH NEW INFO -->
+    <section id="contact" class="py-16 md:py-24 bg-primary text-accent">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <h2 class="text-4xl font-serif font-bold text-center text-accent mb-2">Visit Sattva.</h2>
+            <div class="section-separator !bg-accent/50"></div>
+
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <!-- Location - UPDATED -->
+                <div>
+                    <h3 class="text-2xl font-semibold font-serif mb-3 text-secondary">Location</h3>
+                    <p class="text-lg">Near APMC 2nd Gate, NH 218 Kerur</p>
+                    <p class="text-lg">Tq: Badami, Dist: Bagalkot</p>
+                    <a href="https://maps.google.com/?q=Kerur+Badami+Bagalkot" target="_blank" class="text-accent/80 hover:text-accent underline transition duration-300">
+                        Get Directions on Map
+                    </a>
+                </div>
+                
+                <!-- Hours -->
+                <div>
+                    <h3 class="text-2xl font-semibold font-serif mb-3 text-secondary">Hours</h3>
+                    <p class="text-lg">Mon - Fri: 7:00 AM - 8:00 PM</p>
+                    <p class="text-lg">Sat - Sun: 8:00 AM - 6:00 PM</p>
+                </div>
+
+                <!-- Contact - UPDATED -->
+                <div>
+                    <h3 class="text-2xl font-semibold font-serif mb-3 text-secondary">Connect</h3>
+                    <p class="text-lg">Phone: 7624936266</p>
+                    <p class="text-lg">Email: <a href="mailto:hello@sattvacafe.com" class="hover:underline">hello@sattvacafe.com</a></p>
+                </div>
+            </div>
+
+            <!-- Social Media & Footer Links -->
+            <div class="mt-12 pt-8 border-t border-accent/20 text-center">
+                <div class="flex justify-center space-x-6 mb-4">
+                    <!-- Placeholder Icons for social media (using inline SVG for simplicity) -->
+                    <a href="#" class="text-accent hover:text-secondary transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-label="Facebook"><path d="M19.636 7.425c-.244-.143-.538-.225-.845-.225H5.209c-.307 0-.601.082-.845.225-.244.143-.44.339-.569.593-.129.254-.183.548-.158.847l.213 2.564c.026.308.109.601.252.845.143.244.339.44.593.569.254.129.548.183.847.158l2.564-.213c.308-.026.601-.109.845-.252.244-.143.44-.339.569-.593.129-.254.183-.548.158-.847l-.213-2.564c-.026-.308-.109-.601-.252-.845zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15H8v-8h2v8zm4 0h-2v-8h2v8zm-2-12.28c-.463 0-.84-.377-.84-.84s.377-.84.84-.84.84.377.84.84-.377.84-.84.84z"></path></svg>
+                    </a>
+                    <a href="#" class="text-accent hover:text-secondary transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-label="Instagram"><path d="M12 2.163c3.204 0 3.584.012 4.85.07c3.253.15 4.792 1.483 4.956 4.956.058 1.265.069 1.645.069 4.849 0 3.204-.012 3.584-.069 4.849-.164 3.473-1.702 4.849-4.956 4.956-1.265.058-1.645.069-4.849.069-3.204 0-3.584-.012-4.849-.069-3.253-.164-4.792-1.483-4.956-4.956-.058-1.265-.069-1.645-.069-4.849 0-3.204.012-3.584.069-4.849.164-3.253 1.483-4.792 4.956-4.956 1.265-.058 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.35 0-6.183 1.58-6.398 6.398-.058 1.28-.072 1.687-.072 4.947 0 3.259.014 3.667.072 4.947.215 4.35 1.764 6.183 6.398 6.398 1.28.058 1.687.072 4.947.072s3.667-.014 4.947-.072c4.35-.215 6.183-1.764 6.398-6.398.058-1.28.072-1.687.072-4.947 0-3.259-.014-3.667-.072-4.947-.215-4.35-1.764-6.183-6.398-6.398-1.28-.058-1.687-.072-4.947-.072zM12 8c-2.204 0-4 1.791-4 4s1.796 4 4 4c2.204 0 4-1.791 4-4s-1.796-4-4-4zm0 5.925c-1.61 0-2.925-1.315-2.925-2.925s1.315-2.925 2.925-2.925 2.925 1.315 2.925 2.925-1.315 2.925-2.925 2.925zM15.42 5.25c.677 0 1.226-.549 1.226-1.226s-.549-1.226-1.226-1.226-1.226.549-1.226 1.226.549 1.226 1.226 1.226z"></path></svg>
+                    </a>
+                    <a href="#" class="text-accent hover:text-secondary transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-label="Twitter/X"><path d="M12 0c-6.626 0-12 5.373-12 12s5.374 12 12 12 12-5.373 12-12-5.374-12-12-12zm-2 18h-2v-8h2v8zm4 0h-2v-8h2v8zm-2-12.28c-.463 0-.84-.377-.84-.84s.377-.84.84-.84.84.377.84.84-.377.84-.84.84z"></path></svg>
+                    </a>
+                </div>
+                <p class="text-sm text-accent/50">&copy; 2025 The Sattva Cafe. All rights reserved. | Crafted with Care.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for dynamic features if needed (e.g., sticky header, simple carousel if built) -->
+    <script>
+        // Simple JS for a smooth scrolling feel on nav clicks (Tailwind CSS sets scroll-behavior: smooth in CSS)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
